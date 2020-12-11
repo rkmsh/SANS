@@ -116,6 +116,30 @@ def answer26(datasample):
         sum += int(i)
     return sum
 
+def answer27(datasample):
+    mlst = ["this","python","stuff","really","is","fun"]
+    return datasample.join(mlst)
+
+def answer28(datasample):
+    nlist = []
+    for i in range(1, 1001):
+        if (i % datasample == 0):
+            nlist.append(i)
+    return nlist
+
+def answer29(datasample):
+    nstr = ""
+    for i in datasample:
+        ni = bytearray.fromhex(i).decode()
+        nstr += ni
+    return nstr
+
+def answer30(datasample):
+    nlst = datasample[0]
+    for i in datasample[1]:
+        nlst.append(i)
+    return sorted(set(nlst))
+
 def main():
     print("#0", d.answer( 0, answer0(d.data(0))))
     print("#1", d.answer( 1, answer1(d.data(1))))
@@ -144,6 +168,10 @@ def main():
     print("#24", d.answer( 24, answer24(d.data(24))))
     print("#25", d.answer( 25, answer25(d.data(25))))
     print("#26", d.answer( 26, answer26(d.data(26))))
+    print("#27", d.answer( 27, answer27(d.data(27))))
+    print("#28", d.answer( 28, answer28(d.data(28))))
+    print("#29", d.answer( 29, answer29(d.data(29))))
+    print("#30", d.answer( 30, answer30(d.data(30))))
 
 if __name__ == "__main__":
     d = pyWars.exercise()
