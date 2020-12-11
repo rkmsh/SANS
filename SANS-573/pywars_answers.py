@@ -98,6 +98,24 @@ def answer22(datasample):
 def answer23(datasample):
     return datasample.split("$")[2]
 
+def answer24(datasample):
+    nlist = datasample
+    nlist.append("Pywars rocks")
+    return nlist
+
+def answer25(datasample):
+    sum = 0
+    for i in datasample:
+        sum += i
+    return sum
+
+def answer26(datasample):
+    sum = 0
+    rlst = datasample.split(" ")
+    for i in rlst:
+        sum += int(i)
+    return sum
+
 def main():
     print("#0", d.answer( 0, answer0(d.data(0))))
     print("#1", d.answer( 1, answer1(d.data(1))))
@@ -123,6 +141,9 @@ def main():
     print("#21", d.answer( 21, answer21(d.data(21))))
     print("#22", d.answer( 22, answer22(d.data(22))))
     print("#23", d.answer( 23, answer23(d.data(23))))
+    print("#24", d.answer( 24, answer24(d.data(24))))
+    print("#25", d.answer( 25, answer25(d.data(25))))
+    print("#26", d.answer( 26, answer26(d.data(26))))
 
 if __name__ == "__main__":
     d = pyWars.exercise()
