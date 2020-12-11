@@ -83,6 +83,20 @@ def answer18(datasample):
 def answer19(datasample):
     return datasample[2]
 
+def answer20(datasample):
+    lst = []
+    for num in range(1, datasample):
+        lst.append(num)
+    return lst
+
+def answer21(datasample):
+    return len(datasample)
+
+def answer22(datasample):
+    return datasample.split(",")[9]
+
+def answer23(datasample):
+    return datasample.split("$")[2]
 
 def main():
     print("#0", d.answer( 0, answer0(d.data(0))))
@@ -105,6 +119,10 @@ def main():
     print("#17", d.answer( 17, answer17(d.data(17))))
     print("#18", d.answer( 18, answer18(d.data(18))))
     print("#19", d.answer( 19, answer19(d.data(19))))
+    print("#20", d.answer( 20, answer20(d.data(20))))
+    print("#21", d.answer( 21, answer21(d.data(21))))
+    print("#22", d.answer( 22, answer22(d.data(22))))
+    print("#23", d.answer( 23, answer23(d.data(23))))
 
 if __name__ == "__main__":
     d = pyWars.exercise()
