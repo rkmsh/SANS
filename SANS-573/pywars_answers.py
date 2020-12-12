@@ -140,6 +140,22 @@ def answer30(datasample):
         nlst.append(i)
     return sorted(set(nlst))
 
+def answer31(datasample):
+    return sorted(datasample.keys())
+
+def answer32(datasample):
+    return sorted(datasample.values())
+
+def answer33(datasample):
+    nlst = datasample.items()
+    return sorted(list(nlst))
+
+def answer34(datasample):
+    return datasample["python"] + datasample["rocks"]
+
+def answer35(datasample):
+    return datasample["6-2017"]["Vista"]
+
 def main():
     print("#0", d.answer( 0, answer0(d.data(0))))
     print("#1", d.answer( 1, answer1(d.data(1))))
@@ -172,6 +188,11 @@ def main():
     print("#28", d.answer( 28, answer28(d.data(28))))
     print("#29", d.answer( 29, answer29(d.data(29))))
     print("#30", d.answer( 30, answer30(d.data(30))))
+    print("#31", d.answer( 31, answer31(d.data(31))))
+    print("#32", d.answer( 32, answer32(d.data(32))))
+    print("#33", d.answer( 33, answer33(d.data(33))))
+    print("#34", d.answer( 34, answer34(d.data(34))))
+    print("#35", d.answer( 35, answer35(d.data(35))))
 
 if __name__ == "__main__":
     d = pyWars.exercise()
